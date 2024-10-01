@@ -86,7 +86,7 @@ setTimeout(() => {
         duration: 0.4,
         scrollTrigger: {
           trigger: item,
-          start: "top 85%", // Animation starts when top of item reaches 80% of viewport height
+          start: "top 80%", // Animation starts when top of item reaches 80% of viewport height
           toggleActions: "play none none none", // Animation plays when the element comes into view
         }
       });
@@ -112,7 +112,7 @@ setTimeout(() => {
         delay: 0.1,
         scrollTrigger: {
           trigger: item,
-          start: "top 85%", // Animation starts when top of item reaches 80% of viewport height
+          start: "top 80%", // Animation starts when top of item reaches 80% of viewport height
           toggleActions: "play none none none", // Animation plays when the element comes into view
         }
       });
