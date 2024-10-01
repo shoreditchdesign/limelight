@@ -146,3 +146,48 @@ setTimeout(() => {
       });
     });
   });
+
+  //GSAP for Card Hovers
+
+  document.querySelectorAll('.c-team_wrap').forEach((wrap) => {
+    const overlay = wrap.querySelector('.c-team_overlay');
+    
+    // Store the initial height (probably 0 or collapsed)
+    let overlayInitialHeight = gsap.getProperty(overlay, "height");
+  
+    // Set the final height as the full height of the wrap (this can be dynamically calculated)
+    let overlayFinalHeight = wrap.offsetHeight;
+  
+    // Hover in
+    wrap.addEventListener('mouseenter', () => {
+      gsap.to(overlay, { 
+        height: overlayFinalHeight,  // Use the stored final height
+        duration: 0.5, 
+        ease: 'power1.inOut' 
+      });
+  
+      gsap.to(wrap.querySelector('.c-team_bio'), { 
+        height: 'auto', 
+        duration: 0.01, 
+        ease: 'power1.inOut', 
+        onComplete: function() {
+          wrap.querySelector('.c-team_bio').style.height = 'auto';
+        }
+      });
+    });
+  
+    // Hover out
+    wrap.addEventListener('mouseleave', () => {
+      gsap.to(overlay, { 
+        height: overlayInitialHeight,  // Use the stored initial height
+        duration: 0.5, 
+        ease: 'power1.inOut' 
+      });
+  
+      gsap.to(wrap.querySelector('.c-team_bio'), { 
+        height: 0, 
+        duration: 0., 
+        ease: 'power1.inOut'
+      });
+    });
+  });
