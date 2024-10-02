@@ -30,6 +30,7 @@
     },
   });
 
+  /*
 // Horizontal Scroll
 var container = $('#carousel-wrapper');
 var boxes = $('#carousel-track');
@@ -78,3 +79,4 @@ myCounter.start();
 });
 });
 
+*/
