@@ -30,7 +30,7 @@
     },
   });
 
-  /*
+  /* Deprecated
 // Horizontal Scroll
 var container = $('#carousel-wrapper');
 var boxes = $('#carousel-track');
