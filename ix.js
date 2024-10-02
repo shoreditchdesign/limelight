@@ -30,31 +30,41 @@
     },
   });
 
-  /* Deprecated
+
 // Horizontal Scroll
-var container = $('#carousel-wrapper');
-var boxes = $('#carousel-track');
+  var container = $('#carousel-wrapper');
+  var boxes = $('#carousel-track');
 
-gsap.to(boxes, {
-x: function(){  
-return -(container[0].scrollWidth - document.documentElement.clientWidth) + "px";
-},
-ease: "none",
-scrollTrigger: {
-trigger: container,
-start: "center center",
-end: function(){  
-return "+=" + container[0].scrollWidth * 0.5;
-},
-scrub: true,
-pin: 'body',
-//anticipatePin: 1
-}
+  gsap.to(boxes, {
+    x: function(){  
+      return -(container[0].scrollWidth - document.documentElement.clientWidth) + "px";
+    },
+    ease: "none",
+    scrollTrigger: {
+      trigger: container,
+      start: "top top",
+      end: function(){  
+        return "+=" + container[0].scrollWidth * 0.5;
+      },
+      scrub: true,
+      markers: true
+    }
+  });
 
-});
-ScrollTrigger.refresh();
+  // Listen for scroll events
+  window.addEventListener('scroll', function() {
+    const scrollInitializer = document.getElementById('scroll-initializer');
+    const rect = scrollInitializer.getBoundingClientRect();
 
-//Countup
+    // Check if the top of the #scroll-initializer is in the viewport
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      ScrollTrigger.refresh(); // Refresh ScrollTrigger
+    }
+  });
+
+  ScrollTrigger.refresh();
+
+/*//Countup
 
 $(".counterup").each(function (index) {
 // assign ID
@@ -77,6 +87,4 @@ onEnter: () => {
 myCounter.start();
 }
 });
-});
-
-*/
+});*/
