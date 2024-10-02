@@ -62,8 +62,6 @@
     }
   });
 
-  ScrollTrigger.refresh();
-
 //Countup
 
   $(".counterup").each(function (index) {
