@@ -1,0 +1,60 @@
+/* Swiper Component Styles */
+
+.swiper-scrollbar {
+  background: #E0E2E5; /* Background of the scrollbar track */
+  height: 6px; /* Height of the scrollbar */
+  border-radius: 100px; /* Rounding the corners */
+}
+
+/* Styling the draggable scrollbar handle */
+.swiper-scrollbar-drag {
+  background-color: #0E0A20; /* Color of the draggable handle */
+  border-radius: 100px; /* Rounding the handle corners */
+  height: 6px; /* Handle height should match the track */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the scrollbar handle */
+.swiper-scrollbar-drag:hover {
+  background-color: #608C69; /* Darken the handle on hover */
+}
+
+.c-quote_img-wrap.w-condition-invisible ~ .c-quote_text-wrap {
+  width: 100%; /* Make text wrap full width when a sibling .c-quote_img-wrap has .w-condition-invisible */
+}
+
+/* If the slide contains a nested element with the class .w-condition-invisible, apply a different width */
+.swiper-slide:has(.c-quote_img-wrap.w-condition-invisible) {
+  width: min(calc((80vw - 1rem) / 2), 472px); /* Width for slides without an image */
+}
+
+/* Media Queries for responsive behavior */
+@media (max-width: 992px) {
+  .swiper-slide {
+    width: 140vw; /* Adjust width for tablets */
+  }
+
+  .swiper-slide:has(.c-quote_img-wrap.w-condition-invisible) {
+    width: calc((140vw - 1rem) / 2); /* Ensure is-small slides fill width on tablets */
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-slide {
+    width: 160vw; /* Full width for mobile */
+  }
+
+  .swiper-slide:has(.c-quote_img-wrap.w-condition-invisible) {
+    width: calc((160vw - 1rem) / 2); /* Full width for is-small on mobile as well */
+  }
+}
+
+@media (max-width: 478px) {
+  .swiper-slide {
+    width: 140vw; /* Full width for mobile */
+  }
+
+  .swiper-slide:has(.c-quote_img-wrap.w-condition-invisible) {
+    width: calc((140vw - 1rem) / 2); /* Full width for is-small on mobile as well */
+  }
+}
