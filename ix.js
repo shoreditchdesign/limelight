@@ -1,34 +1,34 @@
-//Swiper 
-var mySwiper = new Swiper('#quote-swiper', {
-slidesPerView: 'auto', // Automatically adjust slides based on their width
-spaceBetween: 28, // Space between slides
-grabCursor: true,
-allowTouchMove: true,
-//loop: true,
-scrollbar: {
-el: '#quote-scrollbar', // Element for the scrollbar
-draggable: true, // Makes the scrollbar draggable
-},
-pagination: {
-el: '#quote-pagination',
-clickable: true,
-},
-navigation: {
-nextEl: '#quote-next',
-prevEl: '#quote-prev',
-},
-breakpoints: {
-0: { /* when window >= 0px - mobile */
-spaceBetween: 16, // Adjust the space between slides for smaller screens
-},
-767: { /* when window >= 767px - tablet */
-spaceBetween: 16, // You can set a different spacing here as needed
-},
-992: { /* when window >= 992px - desktop */
-spaceBetween: 8, // Less space between slides for larger screens
-}
-},
-});
+//Swiper Carousel
+  var mySwiper = new Swiper('#quote-swiper', {
+    slidesPerView: 'auto', // Automatically adjust slides based on their width
+    spaceBetween: 16, // Space between slides
+    grabCursor: true,
+    allowTouchMove: true,
+    //loop: true,
+    scrollbar: {
+      el: '#quote-scrollbar', // Element for the scrollbar
+      draggable: true, // Makes the scrollbar draggable
+    },
+    pagination: {
+      el: '#quote-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '#quote-next',
+      prevEl: '#quote-prev',
+    },
+    breakpoints: {
+      0: { /* when window >= 0px - mobile */
+        spaceBetween: 16, // Adjust the space between slides for smaller screens
+      },
+      767: { /* when window >= 767px - tablet */
+        spaceBetween: 16, // You can set a different spacing here as needed
+      },
+      992: { /* when window >= 992px - desktop */
+        spaceBetween: 8, // Less space between slides for larger screens
+      }
+    },
+  });
 
 // Horizontal Scroll
 var container = $('#carousel-wrapper');
