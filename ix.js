@@ -62,7 +62,7 @@
     }
   });
 
-//Countup
+/*//Countup
 
   $(".counterup").each(function (index) {
     // assign ID
@@ -85,4 +85,4 @@
         myCounter.start();
       }
     });
-  });
+  });*/
